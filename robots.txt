@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lostgem.netlify.app/sitemap.xml

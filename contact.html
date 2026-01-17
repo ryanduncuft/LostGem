@@ -1,175 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | LostGem</title>
-    <meta name="description" content="Reach out to LostGem for music collaborations, business inquiries, press, or fan messages. Use the contact form to connect with LostGem">
-    <meta name="keywords" content="contact LostGem, LostGem email, music collaboration, artist inquiry, press contact, fan mail, Croydon rapper, UK music contact">
-    <meta name="author" content="LostGem">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lostgem.netlify.app/contact.html">
-    <meta property="og:title" content="Contact | LostGem">
-    <meta property="og:description" content="Reach out to LostGem for music collaborations, business inquiries, press, or fan messages. Use the contact form to connect with LostGem">
-    <meta property="og:image" content="https://lostgem.netlify.app/Images/profile.jpg">
-    <meta property="og:image:alt" content="LostGem profile image or contact page banner">
-    <meta property="og:locale" content="en_GB">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@lostgemofficial">
-    <meta name="twitter:creator" content="@lostgemofficial">
-
-    <meta name="twitter:title" content="Contact | LostGem">
-    <meta name="twitter:description" content="Reach out to LostGem for music collaborations, business inquiries, press, or fan messages. Use the contact form to connect with LostGem">
-    <meta name="twitter:image" content="https://lostgem.netlify.app/Images/profile.jpg">
-
-    <link rel="canonical" href="https://lostgem.netlify.app/contact.html">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./dist/output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
     
-    <link rel="icon" type="image/x-icon" href="images/logos/WebpageIcon.ico">
-    <link rel="apple-touch-icon" href="Images/apple-touch-icon.png">
+    <title>Contact Lostgem | Collaborations & Inquiries</title>
+
+    <meta
+        name="description"
+        content="Reach out directly to British Singer Lostgem (Croydon, UK) for music collaborations, business proposals, press requests, or fan messages using the secure contact form."
+    />
+    <meta name="author" content="Lostgem" />
+    <link rel="canonical" href="https://lostgem.netlify.app/contact" />
+
+    <meta property="og:type" content="contact" /> 
+    <meta property="og:url" content="https://lostgem.netlify.app/contact" />
+    <meta property="og:title" content="Contact | Lostgem Direct Access" />
+    <meta
+        property="og:description"
+        content="Reach out to Lostgem for music collaborations, business inquiries, press, or fan messages. Connect with the British Singer from Croydon, UK."
+    />
+    <meta
+        property="og:image"
+        content="https://lostgem.netlify.app/images/me.jpg"
+    />
+    <meta
+        property="og:image:alt"
+        content="Lostgem Profile Image or Contact Page Banner"
+    />
+    <meta property="og:locale" content="en_GB" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lostgemofficial" />
+    <meta name="twitter:creator" content="@lostgemofficial" />
+    <meta name="twitter:title" content="Connect with Lostgem" />
+    <meta
+        name="twitter:description"
+        content="Direct contact portal for music collaborations and professional inquiries with British Rapper Ryze Tha Kidd."
+    />
+    <meta
+        name="twitter:image"
+        content="https://lostgem.netlify.app/images/me.jpg"
+    />
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous"
+    />
+    <link rel="icon" href="/WebpageIcon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192" href="/WebpageIcon.png">
 
     <style>
-        /* This style block ensures consistent design elements with your homepage */
-        @keyframes bounce-slow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-4px); }
-        }
-        .animate-bounce-slow {
-            animation: bounce-slow 2s infinite;
-        }
-        #interactive-bg-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(135deg, #1f1f1f, #333333);
-            overflow: hidden;
-        }
-        body {
-            background-color: #1f1f1f;
-            color: #d1d5db;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-            scroll-behavior: smooth;
-        }
-        .section-card {
-            background-color: #2c2c2e;
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease-in-out;
-        }
-        .section-card:hover {
-            background-color: rgba(44, 44, 46, 0.8);
-            transform: translateY(-0.5rem) scale(1.02);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
-        }
-        .section-heading {
-            color: #8b5cf6;
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
+        /* Page helpers — keep minimal; background rendered in shared canvas */
+        .social-icon-box { transition: all 0.25s ease; }
+        .social-icon-box:hover i { transform: scale(1.08) rotate(4deg); }
     </style>
-
 </head>
-<body class="bg-zinc-800 text-gray-200 font-sans" style="scroll-behavior: smooth;">
 
-    <div id="interactive-bg-wrapper">
-        <canvas id="interactive-bg"></canvas>
-    </div>
+<body>
+    <canvas id="interactive-bg" aria-hidden="true"></canvas>
 
     <div id="navbar-container"></div>
 
-    <div class="min-h-screen flex flex-col relative z-10" id="main-content">
+    <div class="d-flex flex-column position-relative" style="z-index: 10; min-height: 100vh;" id="main-content">
+        <main class="flex-grow-1 container py-5 py-md-7 w-100" aria-labelledby="contact-title">
+            <header class="text-center mb-6 mb-md-8">
+                <h1 id="contact-title" class="display-3 display-md-2 fw-black text-gradient lh-1 mb-4">
+                    // CONNECT_RTK //
+                </h1>
+                <p class="fs-5 text-muted fw-light letter-spacing-wider text-uppercase">
+                    SYSTEM ACCESS: CONTACT PORTAL
+                </p>
+            </header>
 
-        <main class="flex-grow">
-            <section class="py-16 md:py-24">
-                <div class="container mx-auto px-8">
-                    <div class="text-center mb-12">
-                        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold mb-4 text-violet-500 tracking-tight leading-tight md:leading-snug">
-                            GET IN TOUCH
-                        </h1>
-                        <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mt-6">
-                            Have a question, collab idea, or just wanna say what's up? Drop me a message!
-                        </p>
+            <div class="card mx-auto p-5 p-md-6 max-w-form">
+                <div class="row g-5 g-md-6">
+                    <div class="col-12 col-md-6 d-flex flex-column">
+                        <div class="contact-details-panel mb-6 pb-6 border-bottom border-accent-minimal">
+                            <h2 class="fs-4 fw-bold text-secondary mb-4">
+                                <i class="fa-solid fa-headset me-3 text-gradient"></i> CONNECTION LOG
+                            </h2>
+                            <p class="fs-6 text-muted mb-4">
+                                Whether you're a promoter, a fellow artist looking to collab,
+                                or just a fan, choose your method of contact below.
+                            </p>
+
+                            <div class="mt-5 pt-5 border-top border-accent-light">
+                                <div class="d-flex gap-4 mb-5">
+                                    <i class="fa-solid fa-location-dot text-gradient fs-5 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <h3 class="fs-6 fw-semibold text-primary mb-2">
+                                            Location Origin
+                                        </h3>
+                                        <p class="small text-muted mb-0">
+                                            Croydon, Greater London, UK
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-panel">
+                            <h2 class="fs-4 fw-bold text-secondary mb-4">
+                                <i class="fa-solid fa-bolt me-3 text-gradient"></i> SOCIAL FREQUENCIES
+                            </h2>
+                            <div class="d-flex flex-wrap gap-4" aria-label="Social media links">
+                                <a
+                                    href="https://www.youtube.com/@LostGem"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="social-icon-box p-4 rounded-3 fs-4 text-white transition-all"
+                                    style="background-color: rgba(185, 28, 28, 0.6);"
+                                    aria-label="YouTube Channel"
+                                >
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/lostgemofficial/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="social-icon-box p-4 rounded-3 fs-4 text-white transition-all"
+                                    style="background-color: rgba(190, 24, 93, 0.6);"
+                                    aria-label="Instagram Profile"
+                                >
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a
+                                    href="https://twitter.com/lostgemofficial"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="social-icon-box p-4 rounded-3 fs-4 text-white transition-all"
+                                    style="background-color: rgba(59, 130, 246, 0.6);"
+                                    aria-label="Twitter / X Profile"
+                                >
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a
+                                    href="https://open.spotify.com/artist/5SXQ16DR315jqwxafPVzaM?si=vA1eSYX_Qjiy5xtQpRYEOA"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="social-icon-box p-4 rounded-3 fs-4 text-white transition-all"
+                                    style="background-color: rgba(34, 197, 94, 0.6);"
+                                    aria-label="Spotify Link"
+                                >
+                                    <i class="fab fa-spotify"></i>
+                                </a>
+                                <a
+                                    href="https://soundcloud.com/lostgemofficial"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="social-icon-box p-4 rounded-3 fs-4 text-white transition-all"
+                                    style="background-color: rgba(200, 120, 40, 0.6);"
+                                    aria-label="SoundCloud Profile"
+                                >
+                                    <i class="fab fa-soundcloud"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="section-card max-w-4xl mx-auto bg-zinc-900 bg-opacity-30 backdrop-filter backdrop-blur-sm p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12">
-                        
-                        <div class="flex flex-col space-y-8">
-                            <div>
-                                <h2 class="text-3xl font-bold text-gray-100 mb-4">Contact Details</h2>
-                                <p class="text-gray-400">Feel free to reach out to me directly for collaborations, press inquiries, or just to say hello. I'll get back to you as soon as I can.</p>
+                    <div class="col-12 col-md-6">
+                        <h2 class="fs-4 fw-bold text-secondary mb-5">
+                            <i class="fa-solid fa-code-branch me-3 text-gradient"></i> SEND DATA PACKET
+                        </h2>
+                        <form
+                            name="contact"
+                            method="post"
+                            action="/success"
+                            data-netlify="true"
+                            class="d-flex flex-column gap-5"
+                            aria-label="Contact Form"
+                        >
+                            <input type="hidden" name="form-name" value="contact" />
+                            <p class="d-none"> 
+                                <label>Don't fill this out if you're human:
+                                <input name="bot-field" /></label>
+                            </p>
+
+                            <div class="position-relative">
+                                <i class="fa-solid fa-user position-absolute start-3 top-50 translate-middle-y text-muted small"></i>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Name"
+                                    required
+                                    class="form-control ps-5"
+                                />
                             </div>
 
-                            <div class="space-y-6 text-gray-300">
-                                <div class="flex items-center space-x-4">
-                                    <i class="fa-solid fa-envelope-open-text text-violet-500 text-2xl"></i>
-                                    <div>
-                                        <h3 class="font-semibold text-gray-100">Email Address</h3>
-                                        <a href="mailto:ryanduncuft23@gmail.com" class="hover:text-violet-400 transition-colors">ryanduncuft23@gmail.com</a>
-                                    </div>
-                                </div>
-                                <div class="flex items-center space-x-4">
-                                    <i class="fa-solid fa-microphone-lines text-violet-500 text-2xl"></i>
-                                    <div>
-                                        <h3 class="font-semibold text-gray-100">Collaborations</h3>
-                                        <p>Always open to working with other artists!</p>
-                                    </div>
-                                </div>
+                            <div class="position-relative">
+                                <i class="fa-solid fa-envelope position-absolute start-3 top-50 translate-middle-y text-muted small"></i>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email Address"
+                                    required
+                                    class="form-control ps-5"
+                                />
                             </div>
-                        </div>
 
-                        <div>
-                            <form name="contact" method="post" action="/components/success.html" data-netlify="true" class="space-y-6">
-                                <input type="hidden" name="form-name" value="contact">
-                                <p class="hidden">
-                                    <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                                </p>
-                                
-                                <div class="relative">
-                                    <i class="fa-solid fa-user absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                                    <input type="text" name="name" placeholder="Your Name" required
-                                        class="w-full bg-zinc-700 text-gray-200 border border-gray-600 rounded-lg pl-12 pr-4 py-4 focus:outline-none focus:ring-2 focus:ring-violet-500 transition-colors duration-300">
-                                </div>
-                                
-                                <div class="relative">
-                                    <i class="fa-solid fa-envelope absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                                    <input type="email" name="email" placeholder="Your Email" required
-                                        class="w-full bg-zinc-700 text-gray-200 border border-gray-600 rounded-lg pl-12 pr-4 py-4 focus:outline-none focus:ring-2 focus:ring-violet-500 transition-colors duration-300">
-                                </div>
-                                
-                                <div class="relative">
-                                    <i class="fa-solid fa-message absolute left-4 top-4 text-gray-400"></i>
-                                    <textarea name="message" placeholder="Your Message" required rows="6"
-                                        class="w-full bg-zinc-700 text-gray-200 border border-gray-600 rounded-lg pl-12 pr-4 py-4 focus:outline-none focus:ring-2 focus:ring-violet-500 transition-colors duration-300"></textarea>
-                                </div>
-                                
-                                <div data-netlify-recaptcha="true"></div>
-                                
-                                <button type="submit"
-                                    class="w-full bg-violet-600 text-white font-bold py-4 px-6 rounded-full text-lg hover:bg-violet-700 transition-colors duration-300 transform hover:scale-105">
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
+                            <div class="position-relative">
+                                <i class="fa-solid fa-message-dots position-absolute start-3 top-3 text-muted small"></i>
+                                <textarea
+                                    name="message"
+                                    placeholder="Message/Inquiry Details"
+                                    required
+                                    rows="8"
+                                    class="form-control ps-5"
+                                ></textarea>
+                            </div>
+
+                            <div data-netlify-recaptcha="true"></div>
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-lg fw-bold letter-spacing-wider text-uppercase mt-3"
+                            >
+                                TRANSMIT DATA PACKET
+                            </button>
+                        </form>
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
 
         <div id="footer-container"></div>
     </div>
-    
-    <script src="js/app.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/background.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

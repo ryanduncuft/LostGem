@@ -1,0 +1,45 @@
+# =========================================================================
+# GLOBAL SETTINGS
+# =========================================================================
+
+# =========================================================================
+# REWRITE RULES (For clean URLs and functionality)
+# =========================================================================
+
+[[redirects]]
+  # Rule 1: HTML File Cleanup (Pretty URLs)
+  # Allows /about to serve /about.html without showing the extension.
+  from = "/*.html"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  # Rule 2: SUCCESS PAGE REWRITE
+  # Internal rewrite for a clean form submission landing page.
+  from = "/success"
+  to = "/components/success.html"
+  status = 200
+
+[[redirects]]
+  # Rule 3: SEO File Cleanup
+  # Ensures search engines can find your meta files directly.
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+
+# ---
+# =========================================================================
+# FALLBACK (Custom 404 Page)
+# =========================================================================
+
+[[redirects]]
+  # Rule 4: Custom 404 Page
+  # Catches any broken links and serves your custom 404 design.
+  from = "/*"
+  to = "/404.html"
+  status = 404
