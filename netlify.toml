@@ -1,45 +1,46 @@
 # =========================================================================
-# GLOBAL SETTINGS
-# =========================================================================
-
-# =========================================================================
-# REWRITE RULES (For clean URLs and functionality)
+# PRIMARY REDIRECT RULES (Prioritized 301 Permanent Redirects)
 # =========================================================================
 
 [[redirects]]
-  # Rule 1: HTML File Cleanup (Pretty URLs)
-  # Allows /about to serve /about.html without showing the extension.
-  from = "/*.html"
-  to = "/:splat"
+  # Rule 1: Redirect old Netlify subdomain to the canonical domain
+  from = "https://ryzethakidd.netlify.app/*"
+  to = "https://www.ryzethakidd.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  # Rule 2: Redirect HTTP (all domains) to secure HTTPS
+  from = "http://*"
+  to = "https://www.ryzethakidd.com/:splat"
+  status = 301
+  force = true
+
+# =========================================================================
+# REWRITE RULES (Modified for "Ugly" Single/Album URLs)
+# =========================================================================
+
+[[redirects]]
+  # EXCLUSION: If the path is /single or /album exactly, do NOT rewrite to .html.
+  # This forces the server to look for a folder instead of the file, making /single 404
+  # and requiring /single.html
+  from = "/single"
+  to = "/single"
   status = 200
 
 [[redirects]]
-  # Rule 2: SUCCESS PAGE REWRITE
-  # Internal rewrite for a clean form submission landing page.
-  from = "/success"
-  to = "/components/success.html"
+  from = "/album"
+  to = "/album"
   status = 200
 
 [[redirects]]
-  # Rule 3: SEO File Cleanup
-  # Ensures search engines can find your meta files directly.
-  from = "/robots.txt"
-  to = "/robots.txt"
+  # Rule 3: Clean URLs for OTHER static pages (about, contact, etc)
+  from = "/:page"
+  to = "/:page.html"
   status = 200
 
 [[redirects]]
-  from = "/sitemap.xml"
-  to = "/sitemap.xml"
-  status = 200
-
-# ---
-# =========================================================================
-# FALLBACK (Custom 404 Page)
-# =========================================================================
-
-[[redirects]]
-  # Rule 4: Custom 404 Page
-  # Catches any broken links and serves your custom 404 design.
+  # Rule 6: Custom 404 Page
   from = "/*"
   to = "/404.html"
   status = 404
