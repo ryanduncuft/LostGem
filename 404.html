@@ -1,104 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>404 - Transmission Failed</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
-    <link href="./css/custom.css" rel="stylesheet" />
-    <link href="./css/theme.css" rel="stylesheet" />
-    <style>
-      body {
-      background-color: var(--primary-bg, #ffffff);
-      color: var(--text-primary, #000000);
-      }
-      .cont_error_page {
-      position: relative;
-      overflow: hidden;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      }
-      /* Class toggled by JS on load to start entrance animation */
-      body.cont_error_active h1 {
-      left: 0% !important;
-      }
-      body.cont_error_active p {
-      left: 0% !important;
-      }
-      body.cont_error_active .cont_aura_2 {
-      animation-name: animation_error_2;
-      animation-duration: 4s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      transform: rotate(-20deg);
-      }
-      body.cont_error_active .cont_aura_1 {
-      transform: rotate(20deg);
-      right: -170px !important;
-      animation-name: animation_error_1;
-      animation-duration: 4s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      }
-      @keyframes animation_error_1 {
-      from {
-      transform: rotate(20deg);
-      }
-      to {
-      transform: rotate(25deg);
-      }
-      }
-      @keyframes animation_error_2 {
-      from {
-      transform: rotate(-15deg);
-      }
-      to {
-      transform: rotate(-20deg);
-      }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="cont_error_page">
-      <div class="position-relative z-10 text-center p-4 p-md-5 card max-w-card w-100">
-        <h1 class="display-1 display-md-0 fw-bolder text-gradient letter-spacing-wider position-relative transition-all" style="left: -100%;">
-          404
-        </h1>
-        <p class="mt-4 fs-3 fs-md-2 fw-light letter-spacing-wide text-secondary position-relative transition-all" style="left: 100%; transition-delay: 0.5s;">// TRANSMISSION FAILED //</p>
-        <p class="mt-2 fs-5 text-muted">
-          IN OTHER WORDS, IDK WHERE THE FUCK THIS PAGE IS.
-        </p>
-        <div class="mt-5 d-flex flex-column flex-sm-row justify-content-center gap-3">
-          <a
-            class="btn btn-primary d-inline-flex align-items-center justify-content-center px-5 py-3 fw-semibold"
-            href="/"
-            >
-            <i class="fas fa-home me-2">
-            </i> RETURN TO HUB
-          </a>
-          <a class="btn btn-outline-secondary d-inline-flex align-items-center justify-content-center px-5 py-3 fw-semibold text-gradient" href="discography">
-            <i class="fas fa-compact-disc me-2">
-            </i> FIND MUSIC
-          </a>
-        </div>
-      </div>
-      <div class="cont_aura_1 position-absolute top-0 w-100 h-100 transition-all" style="width:300px;height:120%;right:-170px;background-color:rgba(124,58,237,0.12);box-shadow:0 0 40px 8px rgba(124,58,237,0.08);z-index:0;">
-      </div>
-      <div class="cont_aura_2 position-absolute w-100 transition-all" style="bottom:-301px;height:300px;right:-10%;z-index:0;background-color:rgba(124,58,237,0.08);box-shadow:0 0 30px 6px rgba(124,58,237,0.06);">
-      </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js">
-    </script>
+<head>
+    <meta charset="UTF-8">
+    <title>404 - Lost in Space | LostGem</title>
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Performance: Preconnect to font and image servers -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="http://salehriaz.com">
+
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Canonical & Icons -->
+    <link rel="canonical" href="https://lostgem.netlify.app/404">
+    <link rel="icon" href="/WebpageIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/site.css">
+
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add("cont_error_active");
-      });
-    </script>
-  </body>
+            window.ARTIST_ID = "lostgem"; 
+        </script>
+    <script src="https://cdn.ryzethakidd.com/shared/main.js" defer></script>
+
+</head>
+
+<body class="bg-space d-flex flex-column min-vh-100 stars">
+    <!-- Skip to Content for Accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Navigation Header -->
+    <header id="navbar-container"></header>
+
+    <main class="flex-grow-1" id="main-content">
+        <div class="central-body">
+            <img alt="404 Error - Page Not Found" class="image-404" src="http://salehriaz.com/404Page/img/404.svg">
+            <p>Oops! Looks like you're lost in space.</p>
+            <div class="d-flex flex-wrap justify-content-center">
+                <a class="btn-go-home" href="/">GO HOME</a>
+                <a class="btn-discography" href="discography">DISCOGRAPHY</a>
+                <a class="btn-contact" href="contact">CONTACT</a>
+            </div>
+        </div>
+
+        <!-- Animated Space Objects -->
+        <div class="objects">
+            <img alt="Rocket" class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40">
+            <div class="earth-moon">
+                <img alt="Earth" class="object_earth" src="http://salehriaz.com/404Page/img/earth.svg" width="100">
+                <img alt="Moon" class="object_moon" src="http://salehriaz.com/404Page/img/moon.svg" width="80">
+            </div>
+            <div class="box_astronaut">
+                <img alt="Astronaut" class="object_astronaut" src="http://salehriaz.com/404Page/img/astronaut.svg" width="140">
+            </div>
+        </div>
+
+        <!-- Animated Background Stars -->
+        <div class="glowing_stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+    </main>
+
+    <!-- Footer Container -->
+    <footer id="footer-container"></footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" defer></script>
+</body>
 </html>

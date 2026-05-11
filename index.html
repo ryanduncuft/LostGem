@@ -1,164 +1,143 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LostGem Official Site | Latest Music, Discography</title>
-    <meta name="description" content="Official website for British Rapper LostGem. Stream the latest singles, view the discography, and find exclusive content." />
-    <meta name="keywords" content="LostGem, British rapper, emo rap, UK rapper, Mossley, music producer, hip hop, trap music" />
-    <meta name="author" content="Ryze Tha Kidd" />
-    <link rel="canonical" href="https://lostgem.netlify.app" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
-    <link href="./css/custom.css" rel="stylesheet" />
-    <link href="./css/theme.css" rel="stylesheet" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://lostgem.netlify.app" />
-    <meta property="og:title" content="LostGem | British Rapper & Emo Rap Artist" />
-    <meta property="og:description" content="Official website for LostGem, British rapper from Croydon, UK. Stream latest singles, albums, and exclusive music content." />
-    <meta property="og:image" content="https://lostgem.netlify.app/images/me.jpg" />
-    <meta property="og:locale" content="en_GB" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lostgemofficial" />
-    <meta name="twitter:creator" content="@lostgemofficial" />
-    <meta name="twitter:title" content="LostGem | British Rapper" />
-    <meta name="twitter:description" content="Official website for LostGem, British rapper from Croydon, UK." />
-    <meta name="twitter:image" content="https://lostgem.netlify.app/images/me.jpg" />
-    <link rel="icon" href="/WebpageIcon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="192x192" href="/WebpageIcon.png">
-    <style>
-      /* Small inline helper: ensure canvas sits behind content */
-      #interactive-bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; display: block; }
-      main, nav, footer { position: relative; }
-    </style>
-  </head>
-  <body>
-    <canvas id="interactive-bg" aria-hidden="true">
-    </canvas>
-    <div id="navbar-container">
-    </div>
-    <main id="main-content" class="flex-grow-1">
-      <section class="hero hero-main" aria-labelledby="hero-title">
-        <div class="container">
-          <div class="hero-grid">
-            <div class="hero-copy">
-              <p class="eyebrow">LostGem • OFFICIAL</p>
-              <h1 id="hero-title" class="display-3 fw-black mb-4">
-                THE CENTRAL HUB FOR
-                <span class="text-gradient">LOSTGEM</span>
-              </h1>
-              <p class="fs-5 hero-sub mb-4 max-w-text">
-                British singer from Croydon, UK. Explore the releases, the story, and the visual world behind the music.
-              </p>
-              <div class="cta-row">
-                <a href="discography" class="btn btn-primary btn-lg">Explore Discography</a>
-                <a href="contact" class="btn btn-outline-primary btn-lg">Book / Collab</a>
-              </div>
-            </div>
-            <div class="hero-panel">
-              <div id="hero-release-card" class="hero-card surface">
-                <div class="text-center text-muted">Loading latest release...</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="py-5 py-md-6" aria-labelledby="radar-title">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Release Radar</p>
-              <h2 id="radar-title" class="fs-3 fw-bold text-gradient mb-2">Latest Drops & Highlights</h2>
-              <p class="text-muted mb-0">A fast view of the newest releases across albums, EPs, and singles.</p>
-            </div>
-            <a href="discography" class="link-arrow">Open the Archive <i class="fas fa-arrow-right ms-2">
-            </i>
-          </a>
-        </div>
-        <div id="release-radar-grid" class="release-grid">
-        </div>
-      </div>
-    </section>
-    <section id="latest-release-section" class="py-5 py-md-6" aria-labelledby="release-title">
-      <div class="container max-w-content">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Latest</p>
-            <h2 id="release-title" class="fs-3 fw-bold text-gradient mb-2">Latest Release</h2>
-          </div>
-          <a href="discography" class="link-arrow">View All Releases <i class="fas fa-arrow-right ms-2">
-          </i>
-        </a>
-      </div>
-      <div id="latest-release-container" class="card d-flex align-items-center justify-content-center p-5 surface" style="min-height: 200px;">
-        <div id="latest-release-loading" class="text-center" aria-live="polite">
-          <i class="fas fa-sync-alt fa-spin fs-1 text-gradient" aria-hidden="true">
-          </i>
-          <p class="mt-3 fs-6 text-secondary">Loading latest release...</p>
-        </div>
-        <div id="latest-release-error" class="text-center text-danger d-none" aria-live="assertive">
-          <p>Transmission failed. Latest release data could not be loaded.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="py-5 py-md-6" aria-labelledby="video-title">
-    <div class="container max-w-video">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Visuals</p>
-          <h2 id="video-title" class="fs-3 fw-bold text-gradient mb-2">Featured Video</h2>
-        </div>
-        <a href="faq" class="link-arrow">More Videos <i class="fas fa-arrow-right ms-2">
-        </i>
-      </a>
-    </div>
-    <div class="card p-4 p-md-5 surface">
-      <div class="video-aspect-ratio" id="youtube-video-container">
-        <div class="d-flex align-items-center justify-content-center w-100 h-100">
-          <p class="text-secondary fs-6">Video Player Loading Placeholder...</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="py-5 py-md-6">
-  <div class="container">
-    <div class="surface story-panel">
-      <div class="story-grid">
-        <div>
-          <p class="eyebrow">Story</p>
-          <h2 class="fs-3 fw-bold text-gradient mb-3">The Artist, The Vision, The Archive</h2>
-          <p class="text-muted mb-4">
-            From Croydon, LostGem blends emo rap with cinematic storytelling.
-            Dive into the artist profile, discover the visual universe, and follow every release.
-          </p>
-          <a href="about" class="btn btn-outline-primary">Read the Story</a>
-        </div>
-        <div class="story-stats">
-          <div class="stat-card">
-            <span class="stat-label">Origin</span>
-            <span class="stat-value">Croydon, UK</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-label">Genres</span>
-            <span class="stat-value">Hip Hop • Emo Rap • Trap</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-label">Founded</span>
-            <span class="stat-value">2019</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-<div id="footer-container">
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js">
-</script>
-<script src="js/main.js" defer>
-</script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Home | LostGem</title>
+
+        <!-- Performance: Preconnect to CDNs to speed up font and image loading -->
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="preconnect" href="https://res.cloudinary.com">
+
+        <!-- Meta Tags -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="The official site for LostGem: the musical artist from Croydon, UK in the United Kingdom. Visit to stream my latest releases.">
+        <meta name="keywords" content="LostGem, British Rapper, Croydon, Blackpool, UK, United Kingdom, upcoming Singer Songwriter, upcoming Rapper, upcoming Singer, Emo Rap, Hip Hop, Trap Music, UK Rapper">
+        <meta name="author" content="LostGem">
+        <meta name="theme-color" content="#9D00FF">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://lostgem.netlify.app">
+        <meta property="og:title" content="Home | LostGem">
+        <meta property="og:description" content="The official site for LostGem: the musical artist from Croydon, UK in the United Kingdom. Visit to stream my latest releases.">
+        <meta property="og:image" content="https://res.cloudinary.com/dvju1xiaw/image/upload/f_auto,q_auto/v1777702972/me_xdb3pf.jpg">
+        <meta property="og:locale" content="en_GB">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@lostgemofficial">
+        <meta name="twitter:title" content="Home | LostGem">
+        <meta name="twitter:image" content="https://res.cloudinary.com/dvju1xiaw/image/upload/f_auto,q_auto/v1777702972/me_xdb3pf.jpg">
+
+        <!-- Canonical & Icons -->
+        <link rel="canonical" href="https://lostgem.netlify.app">
+        <link rel="icon" href="/WebpageIcon.ico" type="image/x-icon">
+        <link rel="icon" href="/WebpageIcon.png" type="image/png" sizes="192x192">
+
+        <!-- Stylesheets: Placed at top to prevent "Flash of Unstyled Content" -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.ryzethakidd.com/shared/site.css">
+
+        <script>
+            window.ARTIST_ID = "lostgem"; 
+        </script>
+        <script src="https://cdn.ryzethakidd.com/shared/main.js" defer></script>
+    </head>
+
+    <body>
+        <!-- Background Canvas -->
+        <canvas aria-hidden="true" id="interactive-bg"></canvas>
+
+        <!-- Navigation Header -->
+        <header id="navbar-container"></header>
+
+        <main class="flex-grow-1" id="main-content">
+            <!-- Hero Section -->
+            <section class="hero hero-main" aria-labelledby="hero-title">
+                <div class="container">
+                    <div class="hero-grid">
+                        <div class="hero-copy">
+                            <p class="eyebrow">LostGem • OFFICIAL</p>
+                            <h1 class="mb-4 display-3 fw-black" id="hero-title">
+                                THE CENTRAL HUB FOR <span class="text-gradient">LOSTGEM</span>
+                            </h1>
+                            <div class="cta-row">
+                                <a class="btn btn-lg btn-primary" href="discography">Explore Discography</a>
+                                <a class="btn btn-lg btn-outline-primary" href="contact">Book / Collab</a>
+                            </div>
+                        </div>
+                        <div class="hero-panel">
+                            <div class="surface hero-card" id="hero-release-card">
+                                <div class="text-center text-muted">Loading latest release...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Story/Bio Summary -->
+            <section class="py-5 py-md-6">
+                <div class="container">
+                    <div class="surface story-panel">
+                        <div class="story-grid">
+                            <div>
+                                <p class="eyebrow">Story</p>
+                                <h2 class="text-gradient fs-3 fw-bold mb-3">The Artist, The Vision, The Archive</h2>
+                                <p class="mb-4 text-muted">From Croydon, LostGem blends emo rap with cinematic storytelling. Dive into the artist profile, discover the visual universe, and follow every release.</p>
+                                <a class="btn btn-outline-primary" href="about">Read my Story</a>
+                            </div>
+                            <div class="story-stats">
+                                <div class="stat-card"><span class="stat-label">Born </span><span class="stat-value">Croydon, UK</span></div>
+                                <div class="stat-card"><span class="stat-label">Genres </span><span class="stat-value">Hip Hop • Emo Rap • Trap</span></div>
+                                <div class="stat-card"><span class="stat-label">Years Active </span><span class="stat-value">2019 - Present</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Release Radar -->
+            <section class="py-5 py-md-6" aria-labelledby="radar-title">
+                <div class="container">
+                    <div class="section-head">
+                        <div>
+                            <p class="eyebrow">Release Radar</p>
+                            <h2 class="text-gradient fs-3 fw-bold mb-2" id="radar-title">Latest Drops & Highlights</h2>
+                            <p class="text-muted mb-0">A fast view of my newest releases across albums, EPs, and singles.</p>
+                        </div>
+                        <a class="link-arrow" href="discography">Open my Discography <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="release-grid" id="release-radar-grid"></div>
+                </div>
+            </section>
+
+            <!-- Video Section -->
+            <section class="py-5 py-md-6" aria-labelledby="video-title">
+                <div class="container max-w-video">
+                    <div class="section-head">
+                        <div>
+                            <p class="eyebrow">Visuals</p>
+                            <h2 class="text-gradient fs-3 fw-bold mb-2" id="video-title">Featured Video</h2>
+                        </div>
+                        <a class="link-arrow" href="faq">More Videos <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="surface card p-4 p-md-5">
+                        <div class="video-aspect-ratio" id="youtube-video-container">
+                            <div class="align-items-center d-flex justify-content-center h-100 w-100">
+                                <p class="fs-6 text-secondary">Video Player Loading Placeholder...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer-container"></footer>
+
+        <!-- Scripts: Loaded with defer to prevent blocking the visual render -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" defer></script>
+    </body>
 </html>
