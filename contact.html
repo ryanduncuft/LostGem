@@ -1,46 +1,44 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Contact | LostGem</title>
-
-    <!-- Performance: Preconnect to CDNs -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://res.cloudinary.com">
-
-    <!-- Meta Tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Contact me for music collaborations, features, business inquiries, press requests, or direct messaging via secure contact form.">
-    <meta name="keywords" content="LostGem, contact LostGem, collaborations, music features, business inquiries, British rapper">
-    <meta name="author" content="LostGem (Sophie Christoforou)">
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lostgem.netlify.app/contact">
     <meta property="og:title" content="Contact | LostGem">
     <meta property="og:description" content="Contact me for music collaborations, features, business inquiries, press requests, or direct messaging via secure contact form.">
     <meta property="og:image" content="https://res.cloudinary.com/dvju1xiaw/image/upload/f_auto/q_auto/v1792021171/me_yco12l.jpg">
+    <meta property="og:image:alt" content="Official LostGem website artwork">
     <meta property="og:locale" content="en_GB">
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@lostgemofficial">
     <meta name="twitter:title" content="Contact | LostGem">
+    <meta name="twitter:description" content="Contact me for music collaborations, features, business inquiries, press requests, or direct messaging via secure contact form.">
     <meta name="twitter:image" content="https://res.cloudinary.com/dvju1xiaw/image/upload/f_auto/q_auto/v1792021171/me_yco12l.jpg">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://res.cloudinary.com">
+
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="LostGem, contact LostGem, collaborations, music features, business inquiries, British rapper">
+    <meta name="author" content="LostGem (Sophie Christoforou)">
 
     <!-- Canonical & Icons -->
     <link rel="canonical" href="https://lostgem.netlify.app/contact">
     <link rel="icon" href="/WebpageIcon.ico" type="image/x-icon">
     <link rel="icon" href="/WebpageIcon.png" type="image/png" sizes="192x192">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preload" href="https://cdn.ryzethakidd.com/shared/ui.html" as="fetch" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.ryzethakidd.com/shared/site.css">
 
     <script>
-            window.ARTIST_ID = "lostgem"; 
-        </script>
+        window.ARTIST_ID = "lostgem";
+    </script>
     <script src="https://cdn.ryzethakidd.com/shared/main.js" defer></script>
 </head>
 
@@ -59,7 +57,7 @@
             </header>
 
             <div class="card max-w-form mx-auto p-5 p-md-6 reveal">
-                <div class="g-5 g-md-6 row">
+                <div class="g-5 g-md-6 row" id="contact-form-state">
                     <!-- Contact Details & Socials -->
                     <div class="d-flex flex-column col-12 col-md-6">
                         <div class="border-accent-minimal border-bottom contact-details-panel mb-6 pb-6">
@@ -93,19 +91,19 @@
                                 <i class="fa-solid position-absolute small start-3 text-muted top-50 translate-middle-y fa-user"></i>
                                 <input name="name" autocomplete="name" class="form-control ps-5" placeholder="Name" required aria-label="Your Name">
                             </div>
-                            
+
                             <div class="position-relative">
                                 <i class="fa-solid position-absolute small start-3 text-muted top-50 translate-middle-y fa-envelope"></i>
                                 <input name="email" autocomplete="email" class="form-control ps-5" placeholder="Email Address" required type="email" aria-label="Your Email Address">
                             </div>
-                            
+
                             <div class="position-relative">
                                 <i class="fa-solid position-absolute small start-3 text-muted fa-message-dots top-3"></i>
                                 <textarea class="form-control ps-5" name="message" placeholder="Message/Inquiry Details" required rows="8" aria-label="Your Message"></textarea>
                             </div>
-                            
+
                             <div data-netlify-recaptcha="true"></div>
-                            
+
                             <button class="fw-bold btn btn-lg btn-primary letter-spacing-wider mt-3 text-uppercase" type="submit">
                                 TRANSMIT DATA PACKET
                             </button>
