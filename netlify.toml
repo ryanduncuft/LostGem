@@ -59,13 +59,13 @@
     # Protects user privacy when navigating away
     Referrer-Policy = "strict-origin-when-cross-origin"
      
-    # Content Security Policy updated to include gist.github.com in connect-src
+    # Updated Content Security Policy whitelisting your CDN for styles and cdnjs for source maps
     Content-Security-Policy = """
       default-src 'self';
       script-src 'self' https://js.stripe.com https://cdn.ryzethakidd.com https://cdnjs.cloudflare.com https://gist.github.com 'unsafe-inline';
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.ryzethakidd.com;
       font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
       img-src 'self' data: https://*.stripe.com https://res.cloudinary.com https://cdn.ryzethakidd.com https://*.ytimg.com https://salehriaz.com https://gist.githubusercontent.com;
-      connect-src 'self' https://api.stripe.com https://res.cloudinary.com https://cdn.ryzethakidd.com https://cdnjs.cloudflare.com https://gist.githubusercontent.com https://gist.github.com;
+      connect-src 'self' https://api.stripe.com https://res.cloudinary.com https://cdn.ryzethakidd.com https://cdnjs.cloudflare.com https://gist.githubusercontent.com;
       frame-src https://js.stripe.com https://www.youtube.com https://www.youtube-nocookie.com;
     """
